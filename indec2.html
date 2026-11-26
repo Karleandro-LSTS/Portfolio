@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karleandro | Python, Automação e Dados</title>
+  <style>
+    :root {
+      --bg: #0b0f1a;
+      --panel: #121829;
+      --text: #e6ecff;
+      --muted: #8b95b8;
+      --cyan: #00e5ff;
+      --magenta: #ff3dcb;
+      --lime: #b6ff3b;
+      --grad: linear-gradient(120deg, var(--cyan), var(--magenta), var(--lime));
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+    }
+    header, section { padding: 4rem 1.5rem; max-width: 1000px; margin: 0 auto; }
+    header { text-align: center; padding-top: 6rem; }
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 3.6rem);
+      background: var(--grad);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .tagline { color: var(--muted); font-size: 1.15rem; margin-top: .75rem; }
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+      color: var(--cyan);
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid #1f2a4a;
+      border-radius: 14px;
+      padding: 1.4rem;
+      transition: transform .2s, border-color .2s;
+    }
+    .card:hover { transform: translateY(-4px); border-color: var(--magenta); }
+    .card h3 { color: var(--lime); margin-bottom: .5rem; }
+    .card p { color: var(--muted); font-size: .95rem; }
+    .tags { margin-top: .8rem; display: flex; flex-wrap: wrap; gap: .4rem; }
+    .tag {
+      font-size: .75rem;
+      padding: .2rem .6rem;
+      border-radius: 999px;
+      background: #1c2644;
+      color: var(--cyan);
+    }
+    .btn {
+      display: inline-block;
+      margin: .5rem .3rem;
+      padding: .75rem 1.4rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--bg);
+      background: var(--grad);
+    }
+    footer { text-align: center; color: var(--muted); padding: 2rem; font-size: .9rem; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Karleandro</h1>
+    <p class="tagline">Engenheiro de Software | Python, automação e dados</p>
+    <p style="margin-top:1.5rem; color: var(--muted);">
+      Eu transformo tarefas repetitivas em processos automáticos, planilhas em relatórios
+      e dados brutos em decisões claras.
+    </p>
+    <div style="margin-top:2rem;">
+      <a class="btn" href="#projetos">Ver projetos</a>
+      <a class="btn" href="#contato">Entrar em contato</a>
+    </div>
+  </header>
+
+  <section id="servicos">
+    <h2>O que eu faço</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Automação com Python</h3>
+        <p>Scripts que executam tarefas sozinhos: coleta de dados, envio de relatórios, integração entre sistemas.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Automação</span></div>
+      </div>
+      <div class="card">
+        <h3>Planilhas inteligentes</h3>
+        <p>Planilhas com fórmulas, validações e macros que eliminam retrabalho e erros manuais.</p>
+        <div class="tags"><span class="tag">Excel</span><span class="tag">Google Sheets</span></div>
+      </div>
+      <div class="card">
+        <h3>Dados e dashboards</h3>
+        <p>Limpeza, análise e visualização de dados para acompanhar resultados de forma simples.</p>
+        <div class="tags"><span class="tag">Pandas</span><span class="tag">Looker Studio</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projetos">
+    <h2>Projetos</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Automação de relatórios</h3>
+        <p>Script em Python que lê planilhas, calcula indicadores e gera relatórios prontos em minutos.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span></div>
+      </div>
+      <div class="card">
+        <h3>Coleta de dados da web</h3>
+        <p>Extração automática de informações de sites, organizadas em uma planilha atualizada.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Web scraping</span></div>
+      </div>
+      <div class="card">
+        <h3>Robótica e eletrônica</h3>
+        <p>Braço robótico e sistemas com Arduino/ESP32, com controle e automação.</p>
+        <div class="tags"><span class="tag">Arduino</span><span class="tag">Robótica</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <h2>Sobre</h2>
+    <p style="color: var(--muted);">
+      Estudante de Engenharia de Software prestes a se formar, com foco em código, dados e robótica.
+      Gosto de construir soluções práticas e de entregar com documentação clara.
+    </p>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p style="color: var(--muted); margin-bottom: 1.5rem;">Vamos conversar sobre o seu projeto.</p>
+    <a class="btn" href="mailto:seu-email@exemplo.com">E-mail</a>
+    <a class="btn" href="https://github.com/Karleandro-LSTS">GitHub</a>
+    <a class="btn" href="https://www.workana.com/freelancer/SEU-PERFIL">Workana</a>
+  </section>
+
+  <footer>© Karleandro. Feito com Python e muita cor.</footer>
+
+</body>
+</html>
